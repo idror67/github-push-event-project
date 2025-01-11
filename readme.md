@@ -2,7 +2,7 @@
 
 This project sets up a Flask application to handle GitHub push event webhooks. When a push event occurs, the webhook handler extracts the repository name, commit ID, and list of changed files, and writes this information to a JSON file.
 
-## Setup 
+## Setup      
 
 1. Clone the repository:
     ```sh
