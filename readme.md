@@ -44,4 +44,4 @@ An example of the `webhook_output.json` file:
         "file1.txt",
         "file2.txt"
     ]
-}
+}  
