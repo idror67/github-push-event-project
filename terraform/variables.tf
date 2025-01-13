@@ -16,4 +16,7 @@ variable "label" {
 
 variable "linode_token" {
     default = "43bf5d1300c95905a7deddc2c12f7fd2e99dcac3c2ef8189b18d3b89de55a3e7"
-    }    
+    } 
+variable "github_token" {
+    default = "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"
+    }
