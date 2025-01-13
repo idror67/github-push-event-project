@@ -40,7 +40,7 @@ resource "github_repository_webhook" "my_hook" {
     repository = github_repository.arya.name
     events     = ["push"]
     configuration {
-        url          = "http://${linode_instance.name.ip_address}:5000"
+        url          = "http://${linode_instance.HW_Instance.ip_address}:5000"
         content_type = "json"
     }
 }
