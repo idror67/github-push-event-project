@@ -28,3 +28,10 @@ resource "local_file" "linode_IP" {
 output "linode_ip_address" {
     value = linode_instance.HW_Instance.ip_address
 }
+resource "github_repository_webhook" "my_hook" {
+    repository = github_repository.arya.name
+    events     = ["push"]
+    configuration {
+        url          = "http://${linode_instance.name.ip_address}:5000"
+        content_type = "json"
+    }
