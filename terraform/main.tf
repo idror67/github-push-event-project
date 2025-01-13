@@ -25,3 +25,6 @@ resource "local_file" "linode_IP" {
     filename = "linode_IP.txt"
   
 }
+output "linode_ip_address" {
+    value = linode_instance.HW_Instance.ip_address
+}
