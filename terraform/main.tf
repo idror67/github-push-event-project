@@ -36,8 +36,19 @@ resource "local_file" "linode_IP" {
 output "linode_ip_address" {
     value = linode_instance.HW_Instance.ip_address
 }
+
+resource "github_repository" "idror" {
+  name = "github-push-event-project1"
+  description = "this is Winterfell repository"
+}
+
+resource "github_branch" "development" {
+  repository = github_repository.idror.name
+  branch = "development"
+}
+
 resource "github_repository_webhook" "my_hook" {
-    repository = github_repository.arya.name
+    repository = github_repository.idror.name
     events     = ["push"]
     configuration {
         url          = "http://${linode_instance.HW_Instance.ip_address}:5000"
