@@ -43,3 +43,4 @@ resource "github_repository_webhook" "my_hook" {
         url          = "http://${linode_instance.name.ip_address}:5000"
         content_type = "json"
     }
+}
